@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "name": "Web Annotator Extention",
+    "version": "1.0",
+    "description": "Chrome Extention for Annotation on a Web Page",
+    "permission": [
+        "storage",
+        "activeTab",
+        "contextMenus",
+        "scripting"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    },
+    "commands":{
+        "highlight":{
+            "suggested_key":{
+                "default": "Ctrl+Shift+H"
+            },
+            "description": "Highlight selected text"
+        }
+
+    },
+    "content_scripts":[
+        {
+            "matches": ["<all_urls>"],
+            "js":["content.js"],
+            "css":["content.css"]
+        }
+    ],
+
+    "options_page": "options.html"
+}
