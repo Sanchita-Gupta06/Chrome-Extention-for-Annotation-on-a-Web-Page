@@ -6,7 +6,8 @@
     "storage",
     "activeTab",
     "scripting",
-    "tabs"
+    "tabs",
+    "commands"
   ],
   "background": {
     "service_worker": "background.js"
@@ -38,13 +39,8 @@
         "default": "Ctrl+Shift+N"
       },
       "description": "Add a note to the selected text"
-    },
-    "export_annotations_pdf": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+E"
-      },
-      "description": "Export annotations to PDF"
     }
+
   },
   "icons": {
     "16": "images/icon16.png",
